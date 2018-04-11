@@ -1,0 +1,214 @@
+extends ../layout/main
+
+block title
+	| Онлайн-школа родителей Тятьяны Пальцевой
+
+block content
+	.container.top-bg
+		header
+			.content
+				.social
+					.social-item
+						.fa.fa-youtube-play
+					.social-item
+						.fa.fa-facebook
+					.social-item
+						.fa.fa-vk
+					.social-item
+						.fa.fa-instagram
+				a(href="tel:+79031604631").tel +7 (903) 160-46-31
+				.btn Обратный звонок
+
+		h1.main-title Онлайн-школа для родителей Тятьяны Пальцевой
+
+		.content
+			.block-flex
+				.block-left
+					.block-left__title 1 ступень Новорожденный.
+						nobr От А до Я.
+					.duration
+						.duration__item.duration__item_start Начало: &nbsp;
+							span  21 апреля
+						.duration__item.duration__item_cont Длительность: &nbsp;
+							span  2 месяца
+					.benefit
+						.benefit__item
+							.benefit__item_1
+							span Из любой точки
+						.benefit__item
+							.benefit__item_4
+							span На любом устройстве
+						.benefit__item
+							.benefit__item_2
+							span 8 вебинаров
+						.benefit__item
+							.benefit__item_5
+							span 8 мастер-классов и практических занятий
+						.benefit__item
+							.benefit__item_3
+							span 8 видеоуроков
+						.benefit__item
+							.benefit__item_6
+							span Домашние задания, тесты и упражнения
+				.tarif
+					.tarif__title Выберите тариф и оплатите
+					.count
+						.count__item
+							.count__item_start
+							span Количество мест: &nbsp;
+								b  30
+						.line
+						.count__item
+							.count__item_cont
+							span Доступно мест: &nbsp;
+								b  16
+					.subtitle Кол-во мест ограничено
+					.subtitle.subtitle_medium При оплате до 15 апреля действует дополнительная скидка - 15%
+					.btn.btn_orange Выбрать тариф
+
+	.container.container_border.container_padding
+		.content
+			.title.title_no-border Нужна консультация по онлайн-школе?
+			.form
+				.form__item
+					input(placeholder="Ваше имя")
+				.form__item
+					input(placeholder="Номер телефона")
+				.btn.btn_blue Получить консультацию
+			.form-discl
+				input(type="checkbox" id="styled-checkbox-1" value="value1").styled-checkbox
+				label(for="styled-checkbox-1")
+					span Нажав кнопку «Получить консультацию», я даю согласие на обработку моих персональных данных и получение рекламы.
+
+	.container.container_padding
+		.content
+			.title Кому будет полезно обучение в нашей онлайн-школе?
+			.learning
+				.learning__item
+					.learning__item-img
+						img(src="./static/img/general/learn1.png")
+					.learning__item-title Будущим родителям
+				.learning__item
+					.learning__item-img
+						img(src="./static/img/general/learn2.png")
+					.learning__item-title Бабушкам и дедушкам
+				.learning__item
+					.learning__item-img
+						img(src="./static/img/general/learn3.png")
+					.learning__item-title Няням и педагогам
+
+
+	.container.container_padding.bg2
+		.content
+			.title.title_align-left В ходе обучения вы узнаете
+			.benefit.benefit_learn
+				.benefit__item
+					.benefit__item-width
+						.benefit__item_7
+					span все о развитии ребенка от зачатия и до полугодовалого возраста;
+				.benefit__item
+					.benefit__item-width
+						.benefit__item_8
+					span изготовите все игрушки, нужные малышу от рождения;
+				.benefit__item
+					.benefit__item-width
+						.benefit__item_9
+					span подготовитесь к родам морально и физически;
+				.benefit__item
+					.benefit__item-width
+						.benefit__item_10
+					span подготовите дом к появлению новорожденного;
+				.benefit__item
+					.benefit__item-width
+						.benefit__item_11
+					span поймете, что делать с ребёнком после выписки из роддома;
+				.benefit__item
+					.benefit__item-width
+						.benefit__item_12
+					span будете готовы к рождению ребенка на 100%;
+	.container.subscribe
+		.content
+			.subscribe-title Запишитесь на первую ступень онлайн школы и вы узнаете еще больше!
+			img(src="./static/img/general/Shape1.png")
+			.btn.btn_orange Записаться
+
+	.container.container_padding.prices.container_border
+		.content
+			.title Наши тарифы
+			.price
+				.price-item
+					.price-item__name
+						span Базовый
+						span 4 990 руб.
+					ul.price-item__list
+						.price-item__list-title Что входит в тариф:
+						li.price-item__list-item
+							span Вводный вебинар
+						li.price-item__list-item
+							span Полный курс из 8
+						li.price-item__list-item
+							span Психолого-педагогические задания обучающих вебинаров
+						li.price-item__list-item
+							span Общение в закрытом чате
+						.btn.btn_blue Купить Базовый
+				.price-item
+					.price-item__name
+						span Расширенный
+						span 6 990 руб.
+					ul.price-item__list
+						.price-item__list-title Что входит в тариф:
+						li.price-item__list-item
+							span Вводный вебинар
+						li.price-item__list-item
+							span Полный курс из 8
+						li.price-item__list-item
+							span Психолого-педагогические задания обучающих вебинаров
+						li.price-item__list-item
+							span Общение в закрытом чате
+						li.price-item__list-item
+							span 8 мастер-классов по изготовлению игрушек для младенцев и практических занятий по уходу за новорожденными
+						li.price-item__list-item
+							span Выкройки и полные инструкции изготовления мобилей и игрушек
+						li.price-item__list-item
+							span Домашние задания с отчетами
+						.btn.btn_blue Купить Расширенный
+				.price-item
+					.price-item__name
+						span Премиум
+						span 6 990 руб.
+					ul.price-item__list
+						.price-item__list-title Что входит в тариф:
+						li.price-item__list-item
+							span Вводный вебинар
+						li.price-item__list-item
+							span Полный курс из 8
+						li.price-item__list-item
+							span Психолого-педагогические задания обучающих вебинаров
+						li.price-item__list-item
+							span Общение в закрытом чате
+						li.price-item__list-item
+							span 8 мастер-классов по изготовлению игрушек для младенцев и практических занятий по уходу за новорожденными
+						li.price-item__list-item
+							span Выкройки и полные инструкции изготовления мобилей и игрушек
+						li.price-item__list-item
+							span Домашние задания с отчетами
+						li.price-item__list-item
+							span Видеоуроки по йоге для беременных, дыхательным и голосовым техникам в родах, техникам послеродового восстановления
+						li.price-item__list-item
+							span Ведение дневника занятий
+						.btn.btn_blue Купить Премиум
+
+			.title.title_no-border Нужна консультация по онлайн-школе?
+			.form
+				.form__item
+					input(placeholder="Ваше имя")
+				.form__item
+					input(placeholder="Номер телефона")
+				.btn.btn_blue Получить консультацию
+			.form-discl
+				input(type="checkbox" id="styled-checkbox-1" value="value1").styled-checkbox
+				label(for="styled-checkbox-1")
+					span Нажав кнопку «Получить консультацию», я даю согласие на обработку моих персональных данных и получение рекламы.
+
+
+

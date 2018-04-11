@@ -1,0 +1,405 @@
+.top-bg
+	background: url("../img/general/bg.png") no-repeat center
+	background-size: cover
+header
+	width: 100%
+	padding: 25px 0
+	color: #FFFFFF
+	font-weight: 500
+	border-bottom: 1px solid rgba(255, 255, 255, 0.34)
+	margin-bottom: 50px
+	.content
+		+flexBlockRow
+		justify-content: flex-end
+.tel
+	color: #FFFFFF
+	font-weight: 500
+	+font-size(22px)
+	+flexBlockRow
+	margin: 0 35px 0 105px
+	&:before
+		content: ""
+		display: inline-block
+		background: url("../img/general/tel.png") no-repeat center
+		width: 24px
+		height: 24px
+		margin-right: 10px
+
+.social
+	+flexBlockRow
+.social-item
+	width: 53px
+	height: 53px
+	border-radius: 50px
+	margin-left: 10px
+	cursor: pointer
+	+font-size(20px)
+	color: #FFFFFF
+	background-color: rgba(255, 255, 255, 0.34)
+	+flexBlockColumn
+	align-items: center
+	justify-content: center
+	&:hover
+		background-color: $lightBlue
+
+.main-title
+	+font-size(52px)
+	font-weight: 500
+	text-align: center
+	width: 100%
+	color: #FFFFFF
+	margin-bottom: 55px
+	display: block
+
+.block-flex
+	+flexBlockRow
+	padding-bottom: 70px
+
+.block-left
+	width: 100%
+	max-width: 635px
+	color: #FFFFFF
+	&__title
+		text-transform: uppercase
+		+font-size(30px)
+		font-weight: 500
+		margin: 30px 0
+		line-height: 1.3
+.tarif
+	width: 100%
+	max-width: 392px
+	background-color: #FFFFFF
+	border-radius: 6px
+	color: $colorBlack
+	box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.15)
+	+flexBlockColumn
+	padding: 45px 30px
+	position: relative
+	&:before
+		border: 1px dashed $lightBlue
+		content: ""
+		position: absolute
+		top: 13px
+		bottom: 13px
+		left: 13px
+		right: 13px
+		z-index: 1
+
+	&__title
+		+font-size(24px)
+		font-weight: 500
+		margin-bottom: 20px
+		width: 100%
+		text-align: center
+.count
+	+flexBlockRow
+	width: 100%
+	align-items: stretch
+	flex-wrap: nowrap
+	margin-bottom: 20px
+	&__item
+		text-transform: uppercase
+		+font-size(14px)
+		+flexBlockRow
+		justify-content: flex-start
+		span
+			width: 66%
+		&_start
+			+sprite($s-checked)
+			margin-right: 10px
+		&_cont
+			+sprite($s-human-couple)
+			margin-right: 10px
+
+.line
+	margin-right: 17px
+	width: 2px
+	background-color: #CCCCCC
+
+
+.duration
+	+flexBlockRow
+	color: #FFFFFF
+	margin-bottom: 40px
+	&__item
+		font-weight: 400
+		+font-size(24px)
+		+flexBlockRow
+		justify-content: flex-start
+		span
+			font-weight: 500
+		&_start:before
+			content: ""
+			display: inline-block
+			margin-right: 15px
+			+sprite($s-flag)
+		&_cont:before
+			content: ""
+			display: inline-block
+			margin-right: 15px
+			+sprite($s-clock)
+
+.benefit
+	+flexBlockRow
+	&__item-width
+		width: 53px
+	&__item
+		width: 50%
+		font-weight: 400
+		+font-size(18px)
+		color: #FFFFFF
+		+flexBlockRow
+		justify-content: flex-start
+		margin-bottom: 20px
+		span
+			margin-left: 20px
+			width: 70%
+		&_1
+			+sprite($s-a1)
+		&_2
+			+sprite($s-chat)
+		&_3
+			+sprite($s-video-camera)
+		&_4
+			+sprite($s-responsive)
+		&_5
+			+sprite($s-like)
+		&_6
+			+sprite($s-contract)
+		&_7
+			+sprite($s-ultrasound)
+		&_8
+			+sprite($s-pacifier)
+		&_9
+			+sprite($s-care)
+		&_10
+			+sprite($s-house)
+		&_11
+			+sprite($s-newborn)
+		&_12
+			+sprite($s-stroller)
+
+.subtitle
+	+font-size(18px)
+	width: 100%
+	text-align: center
+	color: $colorBlack
+	&_medium
+		font-weight: 500
+		padding: 40px 0
+		line-height: 1.5
+
+.title
+	+font-size(36px)
+	color: $colorBlack
+	line-height: 1.2
+	margin-bottom: 60px
+	width: 100%
+	text-align: center
+	font-weight: 500
+	&:after
+		content: ""
+		display: block
+		height: 2px
+		width: 70px
+		background-color: $lightBlue
+		margin: auto
+		margin-top: 10px
+	&_no-border:after
+		display: none
+	&_align-left
+		text-align: left
+		&:after
+			margin: inherit
+			margin-top: 10px
+
+.form
+	+flexBlockRow
+	margin-bottom: 15px
+	&__item
+		width: 32%
+		input
+			padding-left: 35px
+			width: 100%
+			height: 46px
+			border-radius: 30px
+			border: 2px solid rgb(224, 235, 250)
+			background-color: rgb(249, 250, 255)
+			&::placeholder
+				color: #777777
+				+font-size(16px)
+				font-weight: 500
+	.btn
+		width: 32%
+.form-discl
+	+font-size(15px)
+	text-align: left
+	font-weight: 500
+	+flexBlockRow
+	flex-wrap: nowrap
+	align-items: flex-start
+	justify-content: center
+	span
+		text-align: left
+		display: inline-block
+		line-height: 1.4
+	label
+		+flexBlockRow
+		justify-content: flex-start
+		align-items: flex-start
+		flex-wrap: nowrap
+
+
+.styled-checkbox
+	position: absolute // take it out of document flow
+	opacity: 0 // hide it
+	& + label
+		position: relative
+		cursor: pointer
+		padding: 0
+	// Box.
+	& + label:before
+		content: ''
+		margin-right: 10px
+		display: inline-block
+		vertical-align: text-top
+		width: 20px
+		height: 20px
+		background: rgb(249, 250, 255)
+		border: 2px solid rgb(224, 235, 250)
+		border-radius: 3px
+		vertical-align: top
+
+	// Box checked
+	&:checked + label:before
+		background: $lightBlue
+		border-color: $lightBlue
+
+
+	// Disabled state label.
+	&:disabled + label
+		color: #b8b8b8
+		cursor: auto
+
+
+	// Disabled box.
+	&:disabled + label:before
+		box-shadow: none
+		background: #ddd
+
+
+	// Checkmark. Could be replaced with an image
+	&:checked + label:after
+		content: ''
+		position: absolute
+		left: 5px
+		top: 9px
+		background: white
+		width: 2px
+		height: 2px
+		box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white
+		transform: rotate(45deg)
+
+
+.learning
+	+flexBlockRow
+	justify-content: space-around
+	&__item
+		margin-bottom: 50px
+		width: 100%
+		max-width: 360px
+		cursor: pointer
+		overflow: hidden
+	&__item-img
+		transition: 0.5s
+		border-radius: 7px
+		margin-bottom: 20px
+	&__item-title
+		+font-size(24px)
+		font-weight: 400
+		text-align: center
+
+.learning__item:hover .learning__item-img
+	transform: scale(1.1)
+	transition: 0.5s
+.bg2
+	background: url("../img/general/bg2.png") no-repeat center
+	background-size: cover
+
+.benefit_learn
+	width: 70%
+	+font-size(16px)
+	line-height: 1.2
+	span
+		color: $colorBlack
+
+.subscribe
+	background: url("../img/general/bg-subscribe.png") no-repeat center
+	background-size: cover
+	padding: 45px 0
+	.content
+		+flexBlockRow
+
+.subscribe-title
+	+font-size(30px)
+	color: #ffffff
+	font-weight: 500
+	width: 50%
+
+.prices
+	background: url("../img/general/bg-tarif.png") no-repeat center
+	background-size: cover
+	padding-bottom: 0
+	.form-discl
+		padding-bottom: 60px
+
+.price
+	+flexBlockRow
+	align-items: baseline
+	margin-bottom: 70px
+.price-item
+	+flexBlockColumn
+	width: 100%
+	max-width: 365px
+	cursor: pointer
+	&__name
+		border-radius: 8px 8px 0 0
+		background-color: #3074d3
+		padding: 25px
+		text-align: center
+		width: 100%
+		span
+			display: block
+			color: #ffffff
+		span:first-child
+			text-transform: uppercase
+			font-weight: 400
+			+font-size(20px)
+			margin-bottom: 5px
+		span:last-child
+			+font-size(30px)
+			font-weight: 500
+	&__list
+		padding: 40px 35px
+		background-color: #ffffff
+		border-radius: 0 0 8px 8px
+		box-shadow: 0px 15px 30px 0px rgba(17, 53, 104, 0.08)
+		width: 100%
+		text-align: left
+		.btn
+			width: 100%
+			margin-top: 15px
+	&__list-title
+		+font-size(18px)
+		font-weight: bold
+		margin-bottom: 20px
+	&__list-item
+		list-style-type: disc
+		margin-left: 20px
+		margin-bottom: 15px
+		color: $lightBlue
+		font-weight: 400
+		+font-size(16px)
+		line-height: 1.3
+		span
+			color: $colorBlack
