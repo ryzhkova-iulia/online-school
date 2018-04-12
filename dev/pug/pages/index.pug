@@ -17,9 +17,9 @@ block content
 					.social-item
 						.fa.fa-instagram
 				a(href="tel:+79031604631").tel +7 (903) 160-46-31
-				.btn Обратный звонок
+				.btn.js-callback(data-header="Обратный звонок") Обратный звонок
 
-		h1.main-title Онлайн-школа для родителей Тятьяны Пальцевой
+		h1.main-title Онлайн-школа для родителей Татьяны Пальцевой
 
 		.content
 			.block-flex
@@ -64,17 +64,17 @@ block content
 								b  16
 					.subtitle Кол-во мест ограничено
 					.subtitle.subtitle_medium При оплате до 15 апреля действует дополнительная скидка - 15%
-					.btn.btn_orange Выбрать тариф
+					.btn.btn_orange.js-callback(data-header="Обратный звонок") Выбрать тариф
 
 	.container.container_border.container_padding
 		.content
 			.title.title_no-border Нужна консультация по онлайн-школе?
 			.form
 				.form__item
-					input(placeholder="Ваше имя")
+					input(placeholder="Ваше имя" required)
 				.form__item
-					input(placeholder="Номер телефона")
-				.btn.btn_blue Получить консультацию
+					input(placeholder="Номер телефона" name="phone" required)
+				button(type="submit").btn.btn_blue Получить консультацию
 			.form-discl
 				input(type="checkbox" id="styled-checkbox-1" value="value1").styled-checkbox
 				label(for="styled-checkbox-1")
@@ -130,7 +130,7 @@ block content
 		.content
 			.subscribe-title Запишитесь на первую ступень онлайн школы и вы узнаете еще больше!
 			img(src="./static/img/general/Shape1.png")
-			.btn.btn_orange Записаться
+			.btn.btn_orange.js-callback(data-header="Онлайн запись") Записаться
 
 	.container.container_padding.prices.container_border
 		.content
@@ -139,28 +139,25 @@ block content
 				.price-item
 					.price-item__name
 						span Базовый
-						span 4 990 руб.
+						span 4 900 руб.
 					ul.price-item__list
 						.price-item__list-title Что входит в тариф:
 						li.price-item__list-item
-							span Вводный вебинар
-						li.price-item__list-item
-							span Полный курс из 8
+							span Полный курс из 8 вебинаров
 						li.price-item__list-item
 							span Психолого-педагогические задания обучающих вебинаров
 						li.price-item__list-item
 							span Общение в закрытом чате
-						.btn.btn_blue Купить Базовый
+						.btn.btn_blue.js-callback(data-header="Купить Базовый") Купить Базовый
 				.price-item
+					img(src="./static/img/general/like.png").flag
 					.price-item__name
 						span Расширенный
-						span 6 990 руб.
+						span 7 900 руб.
 					ul.price-item__list
 						.price-item__list-title Что входит в тариф:
 						li.price-item__list-item
-							span Вводный вебинар
-						li.price-item__list-item
-							span Полный курс из 8
+							span Полный курс из 8 вебинаров
 						li.price-item__list-item
 							span Психолого-педагогические задания обучающих вебинаров
 						li.price-item__list-item
@@ -171,17 +168,17 @@ block content
 							span Выкройки и полные инструкции изготовления мобилей и игрушек
 						li.price-item__list-item
 							span Домашние задания с отчетами
-						.btn.btn_blue Купить Расширенный
+						.btn.btn_blue.js-callback(data-header="Купить Расширенный") Купить Расширенный
 				.price-item
 					.price-item__name
 						span Премиум
-						span 6 990 руб.
+						span 9 900 руб.
 					ul.price-item__list
 						.price-item__list-title Что входит в тариф:
+						//li.price-item__list-item
+						//	span Вводный вебинар
 						li.price-item__list-item
-							span Вводный вебинар
-						li.price-item__list-item
-							span Полный курс из 8
+							span Полный курс из 8 вебинаров
 						li.price-item__list-item
 							span Психолого-педагогические задания обучающих вебинаров
 						li.price-item__list-item
@@ -196,19 +193,192 @@ block content
 							span Видеоуроки по йоге для беременных, дыхательным и голосовым техникам в родах, техникам послеродового восстановления
 						li.price-item__list-item
 							span Ведение дневника занятий
-						.btn.btn_blue Купить Премиум
+						.btn.btn_blue.js-callback(data-header="Купить Премиум") Купить Премиум
 
 			.title.title_no-border Нужна консультация по онлайн-школе?
-			.form
+			form.form
 				.form__item
-					input(placeholder="Ваше имя")
+					input(placeholder="Ваше имя" required)
 				.form__item
-					input(placeholder="Номер телефона")
-				.btn.btn_blue Получить консультацию
+					input(placeholder="Номер телефона" name="phone" required)
+				button(type="submit").btn.btn_blue Получить консультацию
 			.form-discl
-				input(type="checkbox" id="styled-checkbox-1" value="value1").styled-checkbox
-				label(for="styled-checkbox-1")
+				input(type="checkbox" id="styled-checkbox-4" value="value1").styled-checkbox
+				label(for="styled-checkbox-4")
 					span Нажав кнопку «Получить консультацию», я даю согласие на обработку моих персональных данных и получение рекламы.
 
+	.container.container_padding
+		.content
+			.title Порядок оплаты и старт обучения
+			.step
+				.step-item
+					.step-item__img.step-item__img1
+					.step-item__title 1. Выбор
+					.step-item__text Выбираете один из <br>трех тарифов
+				.step-item
+					.step-item__img.step-item__img2
+					.step-item__title 2. Оплата
+					.step-item__text Оплачиваете тариф любым <br>удобным для вас способом
+				.step-item
+					.step-item__img.step-item__img3
+					.step-item__title 3. Доступ
+					.step-item__text После произведения оплаты вам на почту придет квитанция и в течение суток мы отправим вам ссылку на первый вебинар и доступ к материалам
+				.step-item
+					.step-item__img.step-item__img4
+					.step-item__title 4. Старт
+					.step-item__text 21 марта в 16:00 перейдите по ссылке на первый вводный вебинар - мы начинаем!
 
+	.container.container_padding.bg-gray.container_border
+		.content
+			.title Вводный вебинар - бесплатно!
+			.video
+				iframe(width="750" height="360" src="https://www.youtube.com/embed/X8Z8okhkjv8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
+
+	.container.container_padding.bg-gray
+		.content
+			form.form
+				.form__item
+					input(placeholder="Ваше имя" required)
+				.form__item
+					input(placeholder="Номер телефона" name="phone" required)
+				button(type="submit").btn.btn_blue Получить ссылку
+			.form-discl
+				input(type="checkbox" id="styled-checkbox-2" value="value1").styled-checkbox
+				label(for="styled-checkbox-2")
+					span Нажав кнопку «Получить ссылку», я даю согласие на обработку моих персональных данных и получение рекламы.
+
+
+
+	.container.container_padding.why-we
+		.content
+			.title Почему мы?
+			.step
+				.step-item
+					.step-item__img.step-item__img5
+					.step-item__text Сертифицированные специалисты
+				.step-item
+					.step-item__img.step-item__img6
+					.step-item__text Уникальная интерактивная программа обучения
+				.step-item
+					.step-item__img.step-item__img7
+					.step-item__text Все знания в одном пакете
+				.step-item
+					.step-item__img.step-item__img8
+					.step-item__text Онлайн обучение
+				.step-item
+					.step-item__img.step-item__img9
+					.step-item__text Онлайн поддержка в закрытом чате
+
+	.container.container_padding
+		.content
+			.about
+				.about-text
+					.title Обо мне
+					p Меня зовут Пальцева Татьяна. И  я представляю вам свою онлайн школу для родителей. Для того, чтобы было понятно, почему я являюсь экспертом в области детско-родительских отношений, я расскажу немного о себе.
+					p.about-item Моё первое профессиональное образование - факультет психологии МГУ, кафедра возрастной психологии. Университет я окончила в далеком 1987 году и с тех пор занимаюсь исключительно психологией.
+					p.about-item За это время я отучилась в аспирантуре Института дошкольного образования РАО и получила степень кандидата психологических наук.
+					p.about-item Практическую подготовку как психотерапевт я получила в Московском институте гештальта и психодрамы и в американской программе обучения психотерапевтов GATLA.
+
+					.hide
+						p.about-item А ещё я получила дополнительную специализацию по работе с психосоматикой.
+						p.about-item Много лет я занималась психологической практикой со взрослыми ни детьми разного возраста, преподавала психологию для взрослых в вузах и колледжах,  участвовала в обучении гештальттерапевтов. И такой разнообразный опыт все больше и больше меня убеждал, что все проблемы взрослых людей имеют свои корни в раннем детстве. И психологи занимаются тем, что фактически залечивают детские травмы и комплексы.
+						p.about-item Уже больше 10 лет назад я открыла для себя педагогическую систему Монтессори, в которой я для себя увидела огромный психотерапевтический потенциал. Это подход, в котором не просто происходит обучение детей, а формируется здоровая (!) гармоничная личность. Я так увлеклась этой философией, что получила целых два Монтессори образования: по работе с детьми от 3 до 6 лет и с 0 до 3 лет (международный диплом по стандарту AMI) и открыла Детский Монтессори клуб.
+						p.about-item И вот последнее десятилетие я ежедневно работаю с детьми дошкольного возраста и их родителями.
+						p У меня есть знания, умения и опыт, которые я готова передавать вам с любовью к детям!
+					.show-more
+						span Читать полностью
+
+				.about-img
+					img(src="./static/img/general/me.png")
+
+	.container.container_padding.bg-gray
+		.content
+			.title Отзывы
+			.js-comments
+				.comment
+					.comment__img
+						img(src="./static/img/general/IMG_5911.jpeg")
+					.comment__info
+						.comment__title
+							.comment__name
+								span Мотылева Ирина
+								.comment__social
+									a(href="#" target="blank").fb
+									a(href="#" target="blank").vk
+									a(href="http://instagram.com/digital_iguana" target="blank").inst
+							.date 02.02.2018
+						.comment__text
+							.quot “
+							span Это была моя вторая беременность. Но только тогда я решилась на то, чтобы посещать школу для беременных. Только тогда я поняла, как это важно - быть готовой к встрече с малышом. Школа Татьяны Васильевны мне очень помогла. Я много узнала о развитии до родов и в ранний период. Мы делали много интересных поделок своими руками: мобили, топпочино игрушки...
+								.hide На некоторых занятиях инструктор йоги показывала различные техники для облегчения родовой деятельности: позы, дыхание, звучание и др.  Занятия посещал и мой муж. Думаю, он тоже многое узнал о развитии детей и о том как за ними ухаживать. Теперь я точно знаю, что готовиться к родам нужно обязательно, несмотря на то какие это роды по счёту ))) Вам мало что  дадут курсы подготовки которые организовывают в поликлинике. Приложения в телефоне тоже не могут рассказать того что я узнала. Информация очень важная для осознанных родителей. Поэтому я ОЧЕНЬ рекомендую эту школу.
+								.show-more Читать полностью
+				.comment
+					.comment__img
+						img(src="./static/img/general/IMG_5913.png")
+					.comment__info
+						.comment__title
+							.comment__name
+								span Ирина
+								.comment__social
+									a(href="#" target="blank").fb
+									a(href="#" target="blank").vk
+									a(href="http://instagram.com/burunduk_toys" target="blank").inst
+							.date 02.02.2018
+						.comment__text
+							.quot “
+							span Подобный курс по подготовке к материнству и встрече со своим маленьким человеком – пожалуй, лучший, который можно себе представить. Татьяна Васильевна, удивительная для меня женщина – нежная, мягкая, заботливая, но при этом энергичная и требовательная, где это нужно. Настоящий профессионал в своем деле, который всегда находится в развитии, что сейчас особенно важно.
+								.hide Мне очень нравится, как были построены занятия – все темы, о которых будет идти речь, мы знали заранее – понимали, что нас ждет, и чего такого важного мы получим. Каждая встреча наполнена полезной и важной информацией, изложена в простой и понятной форме. Особенно ВАЖНО, что всю теорию, полученную на занятиях, мы обязательно отрабатывали на практике. Помните высказывание Конфуция «Скажи мне — и я забуду, покажи мне — и я запомню, дай мне сделать — и я пойму»?
+									| Мы не просто получали информацию о том КАК, но и сразу же закрепляли ее делом.
+									| Учились правильно дышать и расслабляться во время родов, организовывать пространство в детской комнате, делали игрушки – пособия для своих малышей и еще многое другое…
+									| До сих пор храню первый мяч Такане, который сшила дочке вручную, погремушки из ткани, мобили, которые, к слову, завораживали, не только ее, матрасик топпончино. Это игрушки не идеального качества, но переполненные любовью и хорошими пожеланиями.
+									| Знала бы я о том, что эти вещи можно сделать самой, а не бежать в магазин за бездушным пластиком? Нет.
+									| Спасибо Татьяне Васильевне и ее школе за эти полезные знания!
+									| С большим удовольствием рекомендую вас и ваш замечательный курс друзьям, коллегам и всем мамам, которые нуждаются в правильной, естественной информации о том, как быть родителем.
+								.show-more Читать полностью
+				.comment
+					.comment__img
+						img(src="./static/img/general/IMG_5922.jpeg")
+					.comment__info
+						.comment__title
+							.comment__name
+								span Анастасия
+								.comment__social
+									a(href="#" target="blank").fb
+									a(href="#" target="blank").vk
+									a(href="http://instagram.com/nastinet" target="blank").inst
+							.date 02.02.2018
+						.comment__text
+							.quot “
+							span Первый ребёнок. Страшно безумно. Что ждёт впереди? Как рожать? А потом как с ним жить, ухаживать, развивать? Все эти вопросы кружились у меня в голове и очень хотелось найти на них ответы. Как хорошо, что у Татьяны Васильевны как раз начинался курс для беременных. Он мне безумно помог. Знание - сила, которые принесли мне успокоение.
+								.hide А мобили, которые мы сделали отвлекали моего активного ребетенка, чтобы я могла спокойно поесть. Советую всем, кто хочет стать осознанным родителем, быть подкованным в воспитание своего малыша записаться на курс. Он того  стоит.
+								.show-more Читать полностью
+
+
+	.container.container_padding.bg-blue
+		.content
+			.title.title_no-border Остались вопросы по онлайн-школе?
+			form.form
+				.form__item
+					input(placeholder="Ваше имя" required)
+				.form__item
+					input(placeholder="Номер телефона" name="phone" required)
+				button(type="submit").btn.btn_blue Получить консультацию
+			.form-discl
+				input(type="checkbox" id="styled-checkbox-3" value="value1").styled-checkbox
+				label(for="styled-checkbox-3")
+					span Нажав кнопку «Получить консультацию», я даю согласие на обработку моих персональных данных и получение рекламы.
+
+	#popup-form.form-callback.mfp-hide
+		form#poup-callback(name="callback")
+			.title_form
+			form.form
+				.form__item
+					input(placeholder="Ваше имя" required)
+				.form__item
+					input(placeholder="Номер телефона" name="phone" required)
+				.btn.btn_blue Заказать звонок
+			.form-discl
+				input(type="checkbox" id="styled-checkbox-5" value="value1").styled-checkbox
+				label(for="styled-checkbox-5")
+					span Нажав кнопку «Заказать звонок», я даю согласие на обработку моих персональных данных и получение рекламы.
 

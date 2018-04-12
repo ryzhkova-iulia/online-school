@@ -50,6 +50,7 @@ header
 	color: #FFFFFF
 	margin-bottom: 55px
 	display: block
+	line-height: 1.3
 
 .block-flex
 	+flexBlockRow
@@ -169,7 +170,7 @@ header
 		&_7
 			+sprite($s-ultrasound)
 		&_8
-			+sprite($s-pacifier)
+			+sprite($s-duckling)
 		&_9
 			+sprite($s-care)
 		&_10
@@ -361,7 +362,7 @@ header
 	+flexBlockColumn
 	width: 100%
 	max-width: 365px
-	cursor: pointer
+	position: relative
 	&__name
 		border-radius: 8px 8px 0 0
 		background-color: #3074d3
@@ -403,3 +404,246 @@ header
 		line-height: 1.3
 		span
 			color: $colorBlack
+.flag
+	position: absolute
+	top: 0
+	right: 20px
+
+.step
+	+flexBlockRow
+	align-items: baseline
+
+.step-item
+	+flexBlockColumn
+	width: 23%
+	&__title
+		+font-size(24px)
+		font-weight: 500
+		margin-bottom: 15px
+		margin-top: -35px
+	&__text
+		+font-size(16px)
+		font-weight: 400
+		max-width: 265px
+		text-align: center
+		line-height: 1.3
+	&__img1
+		+sprite($s-step-1)
+	&__img2
+		+sprite($s-step-2)
+	&__img3
+		+sprite($s-key)
+	&__img4
+		+sprite($s-gun)
+	&__img5
+		+sprite($s-diploma)
+	&__img6
+		+sprite($s-pencil)
+	&__img7
+		+sprite($s-agenda)
+	&__img8
+		+sprite($s-studies)
+	&__img9
+		+sprite($s-chat1)
+
+.why-we
+	background: url("../img/general/bg_we.png") no-repeat center
+	background-size: cover
+	.title
+		color: #ffffff
+	.step-item__text
+		color: #ffffff
+	.step-item
+		width: 19%
+	.step-item__img
+		margin-bottom: 25px
+
+.about
+	+flexBlockRow
+	align-items: flex-start
+	p
+		+font-size(16px)
+		line-height: 1.3
+		font-weight: 400
+		margin-bottom: 10px
+
+.about-text
+	width: 58%
+	.title
+		text-align: left
+		margin-bottom: 30px
+		&:after
+			margin: inherit
+			margin-top: 10px
+
+.about-img
+	width: 40%
+	img
+		width: 100%
+		max-width: 457px
+
+.about-item
+	&:before
+		display: inline-block
+		vertical-align: middle
+		margin-right: 5px
+		content: ""
+		width: 4px
+		height: 4px
+		background-color: $lightBlue
+		border-radius: 50%
+
+.show-more
+	text-transform: uppercase
+	font-weight: 400
+	color: $lightBlue
+	text-decoration: underline
+	margin-top: 20px
+	display: block
+	cursor: pointer
+
+.hide
+	display: none
+
+.bg-gray
+	background-color: #f9faff
+
+.comment
+	background-color: #ffffff
+	padding: 30px
+	+flexBlockRow
+	flex-wrap: nowrap
+	align-items: flex-start
+	margin: 0 20px
+	box-shadow: 0px 15px 30px 0px rgba(17, 53, 104, 0.08)
+	border-radius: 7px
+	&__img
+		display: inline-block
+		width: 20%
+		img
+			width: 100%
+			max-width: 170px
+	&__info
+		margin-left: 18px
+		width: 75%
+		display: inline-block
+		vertical-align: top
+	&__name
+		+flexBlockRow
+		justify-content: flex-start
+		margin-bottom: 10px
+		span
+			+font-size(24px)
+			font-weight: 500
+			margin-right: 10px
+
+	&__social
+		+flexBlockRow
+		justify-content: flex-start
+		a
+			margin: 0 2px
+	&__text
+		+flexBlockRow
+		flex-wrap: nowrap
+		align-items: flex-start
+		span
+			height: 100px
+			overflow-y: auto
+			line-height: 1.3
+		.show-more
+			text-transform: none
+			display: inline-block
+			margin-top: 0
+
+.date
+	color: #777777
+	margin-bottom: 20px
+.fb
+	+sprite($s-fb)
+.vk
+	+sprite($s-vk)
+.inst
+	+sprite($s-inst)
+
+.quot
+	+font-size(90px)
+	color: $lightBlue
+	font-family: 'Appetite'
+	margin-right: 10px
+	line-height: 0.8
+
+.js-comments
+	.slick-list
+		padding-bottom: 50px
+	.slick-prev
+		left: -5px
+		z-index: 900
+	.slick-next
+		right: -3px
+	.slick-prev, .slick-next
+		background-color: #FFFFFF
+		border-radius: 50%
+		width: 50px
+		height: 50px
+		top: 40%
+	.slick-prev:before
+		content: "\f104"
+		font: normal normal normal 30px/1 FontAwesome
+		color: $colorBlack
+		font-size: 30px
+		opacity: 1
+	.slick-next:before
+		content: "\f105"
+		font: normal normal normal 30px/1 FontAwesome
+		color: $colorBlack
+		font-size: 30px
+
+.bg-blue
+	background: url("../img/general/bg-blue.png") no-repeat center
+	background-size: cover
+	.title
+		color: #FFFFFF
+	.form-discl span
+		color: #FFFFFF
+
+.video
+	width: 100%
+	max-width: 750px
+	margin: auto
+	position: relative
+	padding-bottom: 29.25%
+	padding-top: 30px
+	height: 0
+	overflow: hidden
+	iframe
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+.form-callback
+	background-color: #FFFFFF
+	border-radius: 7px
+	width: 100%
+	max-width: 390px
+	position: relative
+	padding: 45px 35px
+	margin: auto
+	+flexBlockColumn
+	.form__item
+		margin-bottom: 10px
+		width: 100%
+	.btn
+		margin-top: 10px
+		margin-bottom: 20px
+		width: 100%
+#poup-callback
+	width: 100%
+
+
+.title_form
+	margin-bottom: 25px
+	+font-size(30px)
+	font-weight: 500
+	text-align: center
+	width: 100%
