@@ -1141,9 +1141,13 @@ button {
   background: url("../img/general/bg.png") no-repeat center;
   background-size: cover; }
 
+.logo {
+  width: 90px;
+  margin-right: auto; }
+
 header {
   width: 100%;
-  padding: 25px 0;
+  padding: 10px 0;
   color: #FFFFFF;
   font-weight: 500;
   border-bottom: 1px solid rgba(255, 255, 255, 0.34);
@@ -1929,6 +1933,8 @@ header {
     margin-top: 10px;
     margin-bottom: 20px;
     width: 100%; }
+  .form-callback .form-discl span {
+    width: 95%; }
 
 #poup-callback {
   width: 100%; }
@@ -1985,6 +1991,12 @@ header {
     align-items: center; }
   .block-left {
     margin-bottom: 50px; } }
+
+@media screen and (max-width: 940px) {
+  header .content {
+    justify-content: space-between; }
+  .tel, .logo {
+    margin: 0; } }
 
 @media screen and (max-width: 850px) {
   .tel {
@@ -2053,15 +2065,13 @@ header {
     width: 100%;
     text-align: center; } }
 
+@media screen and (max-width: 730px) {
+  .social {
+    display: none; } }
+
 @media screen and (max-width: 630px) {
   .benefit__item {
     width: 100%; }
-  header .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column-reverse; }
   .tel {
     margin: 15px 0; } }
 
@@ -2090,6 +2100,17 @@ header {
     justify-content: space-between;
     align-items: center; } }
 
+@media screen and (max-width: 520px) {
+  .tel, header .btn {
+    margin: 0;
+    margin-left: auto; }
+  header .btn {
+    margin-top: -60px; }
+  .tel {
+    margin-top: -50px; }
+  header .content {
+    justify-content: space-around; } }
+
 @media screen and (max-width: 455px) {
   .count__item {
     display: flex;
@@ -2101,3 +2122,7 @@ header {
   .count__item span {
     margin-top: 10px;
     text-align: center; } }
+
+@media screen and (max-width: 350px) {
+  .logo {
+    width: 80px; } }

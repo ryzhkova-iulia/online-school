@@ -21,6 +21,12 @@
 	.block-left
 		margin-bottom: 50px
 
+@media screen and (max-width: 940px)
+	header .content
+		justify-content: space-between
+	.tel, .logo
+		margin: 0
+
 
 @media screen and (max-width: 850px)
 	.tel
@@ -82,13 +88,17 @@
 		text-align: center
 
 
+@media screen and (max-width: 730px)
+	.social
+		display: none
+
 @media screen and (max-width: 630px)
 	.benefit__item
 		width: 100%
-	header
-		.content
-			+flexBlockColumn
-			flex-direction: column-reverse
+	//header
+	//	.content
+	//		+flexBlockColumn
+	//		flex-direction: column-reverse
 	.tel
 		margin: 15px 0
 
@@ -111,6 +121,17 @@
 		justify-content: center
 		+flexBlockColumn
 
+@media screen and (max-width: 520px)
+	.tel, header .btn
+		margin: 0
+		margin-left: auto
+	header .btn
+		margin-top: -60px
+	.tel
+		margin-top: -50px
+	header .content
+		justify-content: space-around
+
 @media screen and (max-width: 455px)
 	.count__item
 		+flexBlockColumn
@@ -119,3 +140,7 @@
 	.count__item span
 		margin-top: 10px
 		text-align: center
+
+@media screen and (max-width: 350px)
+	.logo
+		width: 80px
