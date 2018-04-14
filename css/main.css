@@ -1168,7 +1168,8 @@ header {
   .tel:before {
     content: "";
     display: inline-block;
-    background: url("../img/general/tel.png") no-repeat center;
+    background: url("../img/svg/telephone.svg") no-repeat center;
+    background-size: cover;
     width: 24px;
     height: 24px;
     margin-right: 10px; }
@@ -1278,23 +1279,24 @@ header {
     justify-content: flex-start; }
     .count__item span {
       width: 66%; }
-    .count__item_start {
-      background-image: url("../img/sprite/sprite.png");
-      background-position: -98px -483px;
-      width: 34px;
-      height: 30px;
-      margin-right: 10px; }
-    .count__item_cont {
-      background-image: url("../img/sprite/sprite.png");
-      background-position: -420px -368px;
-      width: 42px;
-      height: 29px;
-      margin-right: 10px; }
 
 .line {
   margin-right: 17px;
   width: 2px;
   background-color: #CCCCCC; }
+
+.icon {
+  fill: #43ccff; }
+
+.icon-flag {
+  width: 34px;
+  height: 38px;
+  margin-right: 15px; }
+
+.icon-wall-clock {
+  width: 38px;
+  height: 38px;
+  margin-right: 15px; }
 
 .duration {
   display: flex;
@@ -1314,22 +1316,6 @@ header {
     justify-content: flex-start; }
     .duration__item span {
       font-weight: 500; }
-    .duration__item_start:before {
-      content: "";
-      display: inline-block;
-      margin-right: 15px;
-      background-image: url("../img/sprite/sprite.png");
-      background-position: -49px -483px;
-      width: 34px;
-      height: 38px; }
-    .duration__item_cont:before {
-      content: "";
-      display: inline-block;
-      margin-right: 15px;
-      background-image: url("../img/sprite/sprite.png");
-      background-position: -499px -419px;
-      width: 38px;
-      height: 38px; }
 
 .benefit {
   display: flex;
@@ -1383,36 +1369,30 @@ header {
       background-position: -328px -418px;
       width: 67px;
       height: 50px; }
-    .benefit__item_7 {
-      background-image: url("../img/sprite/sprite.png");
-      background-position: -499px -362px;
-      width: 53px;
-      height: 42px; }
-    .benefit__item_8 {
-      background-image: url("../img/sprite/sprite.png");
-      background-position: -420px 0px;
-      width: 64px;
-      height: 64px; }
-    .benefit__item_9 {
-      background-image: url("../img/sprite/sprite.png");
-      background-position: -499px -218px;
-      width: 42px;
-      height: 56px; }
-    .benefit__item_10 {
-      background-image: url("../img/sprite/sprite.png");
-      background-position: -499px -72px;
-      width: 52px;
-      height: 58px; }
-    .benefit__item_11 {
-      background-image: url("../img/sprite/sprite.png");
-      background-position: 0px -483px;
-      width: 34px;
-      height: 58px; }
-    .benefit__item_12 {
-      background-image: url("../img/sprite/sprite.png");
-      background-position: -499px -145px;
-      width: 48px;
-      height: 58px; }
+
+.icon-ultrasound {
+  width: 55px;
+  height: 55px; }
+
+.icon-duckling {
+  width: 64px;
+  height: 64px; }
+
+.icon-care {
+  width: 50px;
+  height: 49px; }
+
+.icon-house {
+  width: 52px;
+  height: 58px; }
+
+.icon-newborn {
+  width: 58px;
+  height: 58px; }
+
+.icon-stroller {
+  width: 60px;
+  height: 60px; }
 
 .subtitle {
   font-size: 18px;
@@ -1711,31 +1691,26 @@ header {
     background-position: 0px -209px;
     width: 195px;
     height: 194px; }
-  .step-item__img5 {
-    background-image: url("../img/sprite/sprite.png");
-    background-position: -420px -291px;
-    width: 51px;
-    height: 62px; }
-  .step-item__img6 {
-    background-image: url("../img/sprite/sprite.png");
-    background-position: -499px 0px;
-    width: 54px;
-    height: 57px; }
-  .step-item__img7 {
-    background-image: url("../img/sprite/sprite.png");
-    background-position: -420px -219px;
-    width: 57px;
-    height: 57px; }
-  .step-item__img8 {
-    background-image: url("../img/sprite/sprite.png");
-    background-position: -420px -150px;
-    width: 61px;
-    height: 54px; }
-  .step-item__img9 {
-    background-image: url("../img/sprite/sprite.png");
-    background-position: -420px -79px;
-    width: 61px;
-    height: 56px; }
+
+.icon-diploma {
+  width: 77px;
+  height: 70px; }
+
+.icon-pencil {
+  width: 67px;
+  height: 68px; }
+
+.icon-agenda {
+  width: 67px;
+  height: 68px; }
+
+.icon-studies {
+  width: 67px;
+  height: 68px; }
+
+.icon-chat1 {
+  width: 67px;
+  height: 68px; }
 
 .why-we {
   background: url("../img/general/bg_we.png") no-repeat center;
@@ -1865,21 +1840,13 @@ header {
   color: #777777;
   margin-bottom: 20px; }
 
-.fb {
-  background-image: url("../img/sprite/sprite.png");
-  background-position: -190px -483px;
-  width: 28px;
-  height: 28px; }
-
-.vk {
-  background-image: url("../img/sprite/sprite.png");
-  background-position: -233px -483px;
-  width: 28px;
-  height: 28px; }
-
 .inst {
   background-image: url("../img/sprite/sprite.png");
   background-position: -147px -483px;
+  width: 28px;
+  height: 28px;
+  background: url("../img/svg/instagram.svg") no-repeat center;
+  background-size: cover;
   width: 28px;
   height: 28px; }
 
@@ -1975,6 +1942,15 @@ header {
   font-weight: 500;
   text-align: center;
   width: 100%; }
+
+.icon-checked {
+  width: 34px;
+  height: 30px;
+  margin-right: 5px; }
+
+.icon-human-couple {
+  width: 50px;
+  height: 37px; }
 
 @media screen and (max-width: 1300px) {
   .content {

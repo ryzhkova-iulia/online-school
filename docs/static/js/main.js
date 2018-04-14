@@ -1,4 +1,6 @@
-
+$(document).ready(function () {
+    svg4everybody({});
+});
 
 $(document).ready(function () {
 

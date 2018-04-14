@@ -14,7 +14,11 @@ var gulp = require('gulp'),
     notify = require("gulp-notify"),
     newer = require("gulp-newer"),
     autoprefixer = require('gulp-autoprefixer'),
-    sass = require('gulp-sass');
+    sass = require('gulp-sass'),
+    svgSprite = require('gulp-svg-sprite'),
+    replace = require('gulp-replace'),
+    svgmin = require('gulp-svgmin'),
+    cheerio = require('gulp-cheerio');
 
 
 
@@ -36,6 +40,33 @@ gulp.task('sass', function () {
         .pipe(browsersync.reload({
             stream: true
         }));
+});
+
+//svg sprite
+gulp.task('svg', function () {
+    return gulp.src('./dev/static/img/svg/*.svg')
+        .pipe(svgmin({
+            js2svg: {
+                pretty: true
+            }
+        }))
+        .pipe(cheerio({
+            run: function($) {
+                $('[fill]').removeAttr('fill');
+                $('[stroke]').removeAttr('stroke');
+                $('[style]').removeAttr('style');
+            },
+            parserOptions: { xmlMode: true }
+        }))
+        .pipe(replace('&gt;', '>'))
+        .pipe(svgSprite({
+            mode: {
+                symbol: {
+                    sprite: "sprite.svg"
+                }
+            }
+        }))
+        .pipe(gulp.dest('./dev/static/img/svg'));
 });
 
 
@@ -70,7 +101,8 @@ gulp.task('scripts', function() {
         'dev/static/libs/bxslider/jquery.bxslider.min.js',
         'dev/static/libs/maskedinput/maskedinput.js',
         'dev/static/libs/slick/slick.min.js',
-        'dev/static/libs/validate/jquery.validate.min.js'
+        'dev/static/libs/validate/jquery.validate.min.js',
+        'node_modules/svg4everybody/dist/svg4everybody.min.js'
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
@@ -106,10 +138,12 @@ gulp.task('spritemade', function() {
     spriteData.css.pipe(gulp.dest('dev/static/sass/')); // путь, куда сохраняем стили
 });
 gulp.task('sprite', ['cleansprite', 'spritemade']);
+
 // Слежение
 gulp.task('watch', ['browsersync', 'sass', 'scripts'], function() {
     gulp.watch('dev/static/sass/**/*.sass', ['sass']);
     gulp.watch('dev/pug/**/*.pug', ['pug']);
+    // gulp.watch('dev/static/img/svg/*.svg', gulp.series('svg'));
     gulp.watch('dev/*.html', browsersync.reload);
     gulp.watch(['dev/static/js/*.js', '!dev/static/js/libs.min.js', '!dev/static/js/jquery.js'], ['scripts']);
 });
@@ -132,7 +166,7 @@ gulp.task('img', function() {
 
 // Сборка проекта
 
-gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
+gulp.task('build', ['clean', 'img', 'sass', 'scripts', 'svg'], function() {
     var buildCss = gulp.src('dev/static/css/*.css')
         .pipe(gulp.dest('docs/static/css'));
 
@@ -151,6 +185,9 @@ gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
             use: [pngquant()]
         }))
         .pipe(gulp.dest('docs/static/img/sprite/'));
+
+    var buildSvg = gulp.src('dev/static/img/svg/symbol/sprite.svg')
+        .pipe(gulp.dest('docs/static/img/svg/symbol/'));
 });
 
 // Очистка кеша

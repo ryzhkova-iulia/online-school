@@ -1,4 +1,5 @@
 extends ../layout/main
+include ../mixins
 
 block title
 	| Онлайн-школа родителей Тятьяны Пальцевой
@@ -27,9 +28,13 @@ block content
 					.block-left__title 1 ступень Новорожденный.
 						nobr От А до Я.
 					.duration
-						.duration__item.duration__item_start Начало: &nbsp;
+						.duration__item.duration__item_start
+							+icon('flag')
+							| Начало: &nbsp;
 							span  21 апреля
-						.duration__item.duration__item_cont Длительность: &nbsp;
+						.duration__item.duration__item_cont
+							+icon('wall-clock')
+							| Длительность: &nbsp;
 							span  2 месяца
 					.benefit
 						.benefit__item
@@ -54,11 +59,13 @@ block content
 					.tarif__title Выберите тариф и оплатите
 					.count
 						.count__item
-							.count__item_start
-							span Количество мест: &nbsp;
+							+icon('checked')
+							span
+								| Количество мест: &nbsp;
 								b  30
 						.line
 						.count__item
+							+icon('human-couple')
 							.count__item_cont
 							span Доступно мест: &nbsp;
 								b  16
@@ -104,27 +111,27 @@ block content
 			.benefit.benefit_learn
 				.benefit__item
 					.benefit__item-width
-						.benefit__item_7
+						+icon('ultrasound')
 					span все о развитии ребенка от зачатия и до полугодовалого возраста;
 				.benefit__item
 					.benefit__item-width
-						.benefit__item_8
+						+icon('duckling')
 					span изготовите все игрушки, нужные малышу от рождения;
 				.benefit__item
 					.benefit__item-width
-						.benefit__item_9
+						+icon('care')
 					span подготовитесь к родам морально и физически;
 				.benefit__item
 					.benefit__item-width
-						.benefit__item_10
+						+icon('house')
 					span подготовите дом к появлению новорожденного;
 				.benefit__item
 					.benefit__item-width
-						.benefit__item_11
+						+icon('newborn')
 					span поймете, что делать с ребёнком после выписки из роддома;
 				.benefit__item
 					.benefit__item-width
-						.benefit__item_12
+						+icon('stroller')
 					span будете готовы к рождению ребенка на 100%;
 	.container.subscribe
 		.content
@@ -254,19 +261,24 @@ block content
 			.title Почему мы?
 			.step
 				.step-item
-					.step-item__img.step-item__img5
+					.step-item__img
+						+icon('diploma')
 					.step-item__text Сертифицированные специалисты
 				.step-item
-					.step-item__img.step-item__img6
+					.step-item__img
+						+icon('pencil')
 					.step-item__text Уникальная интерактивная программа обучения
 				.step-item
-					.step-item__img.step-item__img7
+					.step-item__img
+						+icon('agenda')
 					.step-item__text Все знания в одном пакете
 				.step-item
-					.step-item__img.step-item__img8
+					.step-item__img
+						+icon('studies')
 					.step-item__text Онлайн обучение
 				.step-item
-					.step-item__img.step-item__img9
+					.step-item__img
+						+icon('chat1')
 					.step-item__text Онлайн поддержка в закрытом чате
 
 	.container.container_padding
@@ -375,4 +387,3 @@ block content
 				input(type="checkbox" id="styled-checkbox-5" value="value1").styled-checkbox
 				label(for="styled-checkbox-5")
 					span Нажав кнопку «Заказать звонок», я даю согласие на обработку моих персональных данных и получение рекламы.
-
