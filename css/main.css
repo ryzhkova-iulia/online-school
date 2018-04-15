@@ -1142,8 +1142,7 @@ button {
   background-size: cover; }
 
 .logo {
-  width: 90px;
-  margin-right: auto; }
+  width: 90px; }
 
 header {
   width: 100%;
@@ -1156,8 +1155,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    justify-content: flex-end; }
+    flex-wrap: wrap; }
 
 .tel {
   color: #FFFFFF;
@@ -1167,8 +1165,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  margin: 0 35px 0 105px; }
+  flex-wrap: wrap; }
   .tel:before {
     content: "";
     display: inline-block;
